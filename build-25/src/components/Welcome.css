@@ -1,0 +1,65 @@
+/* src/components/Welcome.css */
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f8f9fa;
+}
+
+.welcome-header {
+  background-color: #003366;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.welcome-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.bottom-menu {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout-popup {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.logout-popup .popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logout-popup button {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
