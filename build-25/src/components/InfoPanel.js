@@ -10,64 +10,75 @@ const InfoPanel = ({ selectedNode }) => {
     return <div className="info-placeholder">Select an item to view details</div>;
   }
 
-  const renderDatabaseInfo = () => {
-    const keyInfo = selectedNode.meta?.keyInfo;
-    if (!keyInfo) return null;
+  const renderPieChart = (data) => (
+    <PieChart width={250} height={250}>
+      <Pie
+        data={data}
+        dataKey="value"
+        nameKey="name"
+        cx="50%"
+        cy="50%"
+        outerRadius={80}
+        label
+      >
+        {data.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+        ))}
+      </Pie>
+      <Tooltip />
+      <Legend />
+    </PieChart>
+  );
 
-    const data = [
-      { name: "Tablespaces", value: parseInt(keyInfo.numberOfTablespaces) },
-      { name: "Tables", value: parseInt(keyInfo.numberOfTables) },
-      { name: "Indexes", value: parseInt(keyInfo.numberOfIndexes) },
-      { name: "Views", value: parseInt(keyInfo.numberOfViews) }
-    ];
+  const renderInfoSection = () => {
+    let data = [];
+    let info = null;
+    let title = `${selectedNode.name} - ${selectedNode.type}`;
+
+    if (selectedNode.type === "Database" && selectedNode.meta?.keyInfo) {
+      const k = selectedNode.meta.keyInfo;
+      data = [
+        { name: "Tablespaces", value: parseInt(k.numberOfTablespaces) },
+        { name: "Tables", value: parseInt(k.numberOfTables) },
+        { name: "Indexes", value: parseInt(k.numberOfIndexes) },
+        { name: "Views", value: parseInt(k.numberOfViews) }
+      ];
+      info = k;
+    } else if (selectedNode.meta?.["object-details"]) {
+      const d = selectedNode.meta["object-details"];
+      const keys = Object.keys(d);
+      if (keys.length >= 2) {
+        data = keys.slice(0, 4).map((key) => ({
+          name: key,
+          value: isNaN(Number(d[key])) ? 1 : Number(d[key])
+        }));
+      }
+      info = d;
+    }
 
     return (
       <div>
-        <h3>{selectedNode.name} - Database</h3>
-        <PieChart width={300} height={300}>
-          <Pie
-            data={data}
-            dataKey="value"
-            nameKey="name"
-            cx="50%"
-            cy="50%"
-            outerRadius={90}
-            fill="#8884d8"
-            label
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Pie>
-          <Tooltip />
-          <Legend />
-        </PieChart>
-        <pre className="ddl-box">{selectedNode.meta.ddl?.sql}</pre>
-      </div>
-    );
-  };
-
-  const renderTableOrTSInfo = () => {
-    const details = selectedNode.meta?.["object-details"];
-    if (!details) return null;
-
-    return (
-      <div>
-        <h3>{selectedNode.name} - {selectedNode.type}</h3>
-        <div className="info-card">
-          {Object.entries(details).map(([key, value]) => (
-            <p key={key}><strong>{key}:</strong> {value}</p>
-          ))}
+        <h3>{title}</h3>
+        <div className="info-flex">
+          {data.length > 0 && renderPieChart(data)}
+          {info && (
+            <div className="info-card">
+              {Object.entries(info).map(([key, value]) => (
+                <p key={key}><strong>{key}:</strong> {value}</p>
+              ))}
+            </div>
+          )}
         </div>
+        {selectedNode.meta?.ddl?.sql && (
+          <pre className="ddl-box">{selectedNode.meta.ddl.sql}</pre>
+        )}
       </div>
     );
   };
 
   return (
     <div className="info-panel-inner">
-      {selectedNode.type === "Database"
-        ? renderDatabaseInfo()
-        : renderTableOrTSInfo()}
+      {renderInfoSection()}
     </div>
   );
 };

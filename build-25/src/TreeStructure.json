@@ -36,7 +36,7 @@
                             "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
                           },
                           "ddl": {
-                            "sql": "CREATE DATABASE DB001 ..."
+                            "sql": "CREATE DATABASE DB001\n  BUFFERPOOL BP0\n  INDEXBP BP1\n  STOGROUP SYSDEFLT\n  CCSID EBCDIC\n  COLLATE USING SYSTEM\n  CLOSE YES\n  RESTRICT ON DROP NO\n  WITH 'This is a sample database created for testing purposes';\n\nCREATE TABLESPACE TS_SAMPLE\n  IN DATABASE DB001\n  USING STOGROUP SYSDEFLT\n  PRIQTY 1000 SECQTY 100\n  BUFFERPOOL BP0\n  LOCKSIZE ROW\n  LOCKMAX SYSTEM\n  CLOSE YES;"
                           }
                         },
                         "childern": [
@@ -94,7 +94,7 @@
                             "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
                           },
                           "ddl": {
-                            "sql": "CREATE DATABASE DB002 ..."
+                            "sql": "CREATE DATABASE DB002\n  BUFFERPOOL BP0\n  INDEXBP BP1\n  STOGROUP SYSDEFLT\n  CCSID EBCDIC\n  COLLATE USING SYSTEM\n  CLOSE YES\n  RESTRICT ON DROP NO\n  WITH 'This is a sample database created for testing purposes';\n\nCREATE TABLESPACE TS_SAMPLE\n  IN DATABASE DB001\n  USING STOGROUP SYSDEFLT\n  PRIQTY 1000 SECQTY 100\n  BUFFERPOOL BP0\n  LOCKSIZE ROW\n  LOCKMAX SYSTEM\n  CLOSE YES;"
                           }
                         },
                         "childern": [
@@ -152,7 +152,7 @@
                             "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
                           },
                           "ddl": {
-                            "sql": "CREATE DATABASE DB003 ..."
+                            "sql": "CREATE DATABASE DB003\n  BUFFERPOOL BP0\n  INDEXBP BP1\n  STOGROUP SYSDEFLT\n  CCSID EBCDIC\n  COLLATE USING SYSTEM\n  CLOSE YES\n  RESTRICT ON DROP NO\n  WITH 'This is a sample database created for testing purposes';\n\nCREATE TABLESPACE TS_SAMPLE\n  IN DATABASE DB001\n  USING STOGROUP SYSDEFLT\n  PRIQTY 1000 SECQTY 100\n  BUFFERPOOL BP0\n  LOCKSIZE ROW\n  LOCKMAX SYSTEM\n  CLOSE YES;"
                           }
                         },
                         "childern": [
@@ -210,7 +210,7 @@
                             "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
                           },
                           "ddl": {
-                            "sql": "CREATE DATABASE DB004 ..."
+                            "sql": "CREATE DATABASE DB004\n  BUFFERPOOL BP0\n  INDEXBP BP1\n  STOGROUP SYSDEFLT\n  CCSID EBCDIC\n  COLLATE USING SYSTEM\n  CLOSE YES\n  RESTRICT ON DROP NO\n  WITH 'This is a sample database created for testing purposes';\n\nCREATE TABLESPACE TS_SAMPLE\n  IN DATABASE DB001\n  USING STOGROUP SYSDEFLT\n  PRIQTY 1000 SECQTY 100\n  BUFFERPOOL BP0\n  LOCKSIZE ROW\n  LOCKMAX SYSTEM\n  CLOSE YES;"
                           }
                         },
                         "childern": [
