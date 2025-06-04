@@ -3,13 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 import TreeView from "./TreeView";
 import InfoPanel from "./InfoPanel";
-import initialData from "../TreeStructure.json"; // Replace with your actual JSON import
+import initialData from "../TreeStructure.json";
 import "./Welcome.css";
 
 const Welcome = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedNode, setSelectedNode] = useState(null);
   const [treeData, setTreeData] = useState(initialData);
+  const [expandedNodes, setExpandedNodes] = useState({});
+  const [showToast, setShowToast] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -21,7 +23,10 @@ const Welcome = () => {
     setSelectedNode(node);
   };
 
-  // Load more dummy nodes
+  const toggleNode = (name) => {
+    setExpandedNodes((prev) => ({ ...prev, [name]: !prev[name] }));
+  };
+
   const handleLoadMore = (parentNode) => {
     if (!parentNode || !parentNode.childern) return;
 
@@ -53,8 +58,12 @@ const Welcome = () => {
     parentNode.loadedCount = nextCount;
     parentNode.hasMore = nextCount < totalCount;
 
-    // Force state update
     setTreeData([...treeData]);
+  };
+
+  const handleAddToFavorites = () => {
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
   };
 
   return (
@@ -63,16 +72,31 @@ const Welcome = () => {
 
       <div className="dashboard-content">
         <div className="tree-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="tree-search-input"
+          />
           <TreeView
             data={treeData}
             onSelectNode={handleNodeSelect}
             onLoadMore={handleLoadMore}
+            expandedNodes={expandedNodes}
+            toggleNode={toggleNode}
           />
         </div>
+
         <div className="info-panel">
+          <div className="info-panel-header">
+            <button onClick={handleAddToFavorites} className="add-fav-button">
+              Add to Favourites
+            </button>
+          </div>
           <InfoPanel selectedNode={selectedNode} />
         </div>
       </div>
+
+      {showToast && <div className="toast-success">Added to favourites!</div>}
 
       <div className="bottom-menu">
         <div className="logout-icon" onClick={() => setShowPopup(true)}>

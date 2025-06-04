@@ -1,8 +1,7 @@
-// src/components/TreeView.js
 import React from "react";
 import TreeNode from "./TreeNode";
 
-const TreeView = ({ data, onSelectNode, onLoadMore }) => {
+const TreeView = ({ data, onSelectNode, onLoadMore, expandedNodes, toggleNode }) => {
   return (
     <div>
       {data.map((node, index) => (
@@ -11,6 +10,8 @@ const TreeView = ({ data, onSelectNode, onLoadMore }) => {
           node={node}
           onSelect={onSelectNode}
           onLoadMore={onLoadMore}
+          expandedNodes={expandedNodes}
+          toggleNode={toggleNode}
         />
       ))}
     </div>

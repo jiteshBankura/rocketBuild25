@@ -1,23 +1,17 @@
-// src/components/TreeNode.js
-import React, { useState } from "react";
+import React from "react";
 
-const TreeNode = ({ node, onSelect, onLoadMore }) => {
-  const [expanded, setExpanded] = useState(false);
-
+const TreeNode = ({ node, onSelect, onLoadMore, expandedNodes, toggleNode }) => {
   const hasChildren = Array.isArray(node.childern) && node.childern.length > 0;
   const hasMore = node.hasMore;
-
-  const toggleExpand = () => {
-    setExpanded((prev) => !prev);
-  };
+  const isExpanded = expandedNodes[node.name];
 
   return (
     <div className="tree-node">
-      <div onClick={() => { toggleExpand(); onSelect(node); }}>
-        {hasChildren ? <span>{expanded ? "▼" : "▶"}</span> : "•"} {node.name}
+      <div onClick={() => { toggleNode(node.name); onSelect(node); }}>
+        {hasChildren ? <span>{isExpanded ? "▼" : "▶"}</span> : "•"} {node.name}
       </div>
 
-      {expanded && hasChildren && (
+      {isExpanded && hasChildren && (
         <div className="tree-children">
           {node.childern.map((child, index) => (
             <TreeNode
@@ -25,6 +19,8 @@ const TreeNode = ({ node, onSelect, onLoadMore }) => {
               node={child}
               onSelect={onSelect}
               onLoadMore={onLoadMore}
+              expandedNodes={expandedNodes}
+              toggleNode={toggleNode}
             />
           ))}
 
@@ -46,3 +42,4 @@ const TreeNode = ({ node, onSelect, onLoadMore }) => {
 };
 
 export default TreeNode;
+
