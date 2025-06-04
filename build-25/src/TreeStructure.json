@@ -1,0 +1,653 @@
+[
+  {
+    "name": "SYSPLEX (1)",
+    "childern": [
+      {
+        "name": "RSPLEX01 (5)",
+        "childern": [
+          {
+            "name": "RS22 (12)",
+            "childern": [
+              {
+                "name": "RC1L",
+                "childern": [
+                  {
+                    "name": "Databases (30)",
+                    "type": "Folder",
+                    "childern": [
+                      {
+                        "name": "DB001",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB001 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB001",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB002",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB002 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB002",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB003",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB003 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB003",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB004",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB004 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB004",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB005",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB005 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB005",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB006",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB006 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB006",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB007",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB007 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB007",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB008",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB008 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB008",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB009",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB009 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB009",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "DB010",
+                        "type": "Database",
+                        "meta": {
+                          "keyInfo": {
+                            "implicit": "No",
+                            "numberOfTablespaces": "27",
+                            "numberOfTables": "26",
+                            "numberOfIndexes": "40",
+                            "numberOfViews": "3",
+                            "db2Version": "V13",
+                            "createdBy": "CSMVDQO",
+                            "createdOn": "2025-02-24 00:47:22.301701",
+                            "lastAlteredOn": "2025-02-24 00:47:22.301701",
+                            "storageGroup": "SYSDEFLT",
+                            "bufferPool": "BP0",
+                            "indexBufferPool": "BP0",
+                            "encodingScheme": "EBCDIC",
+                            "sbcsCcsid": "37 - USA, Canada, Netherlands, Portugal, Brazil, Australia, New Zealand"
+                          },
+                          "ddl": {
+                            "sql": "CREATE DATABASE DB010 ..."
+                          }
+                        },
+                        "childern": [
+                          {
+                            "name": "TS01",
+                            "type": "Tablespace",
+                            "meta": {
+                              "object-details": {
+                                "dbName": "DB010",
+                                "type": "Partition-by-growth",
+                                "maxRows": "255",
+                                "log": "Logged",
+                                "createdBy": "CSMVDQO",
+                                "createdOn": "2025-02-24 00:47:24.764561",
+                                "bufferPool": "BP0"
+                              }
+                            },
+                            "childern": [
+                              {
+                                "name": "TABLE01",
+                                "type": "Table",
+                                "meta": {
+                                  "object-details": {
+                                    "db2Version": "V13",
+                                    "createdBy": "CSMVDQO",
+                                    "createdOn": "2025-02-24 00:47:24.766865",
+                                    "columns": "12",
+                                    "rows": "Unknown"
+                                  }
+                                },
+                                "childern": null
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "hasMore": true,
+                    "totalCount": 30,
+                    "loadedCount": 10
+                  },
+                  {
+                    "name": "Schemas (4562)",
+                    "type": "Folder",
+                    "childern": [
+                      {
+                        "name": "SC1 (400)",
+                        "type": "Schema",
+                        "childern": [
+                          {
+                            "name": "TABLE (200)",
+                            "type": "Folder",
+                            "childern": []
+                          },
+                          {
+                            "name": "ALIAS (30)",
+                            "type": "Folder",
+                            "childern": []
+                          },
+                          {
+                            "name": "INDEX (40)",
+                            "type": "Folder",
+                            "childern": []
+                          },
+                          {
+                            "name": "TRIGGER",
+                            "type": "Folder",
+                            "childern": []
+                          },
+                          {
+                            "name": "VIEW",
+                            "type": "Folder",
+                            "childern": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SC2 (300)",
+                        "type": "Schema",
+                        "childern": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
